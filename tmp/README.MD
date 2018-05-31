@@ -1,8 +1,8 @@
 # ocserv-cn-no-route
 
-## ®aÉúß^³Ì
+## ç”¢ç”Ÿéç¨‹
 
-1¡¢Éú³É×îĞÂ¹úÄÚIPÁĞ±íchnroute.txt
+1ã€ç”Ÿæˆæœ€æ–°å›½å†…IPåˆ—è¡¨chnroute.txt
 
 ```
 wget -N http://ftp.afrinic.net/pub/stats/afrinic/delegated-afrinic-extended-latest
@@ -14,27 +14,27 @@ cat delegated-afrinic-extended-latest delegated-apnic-extended-latest delegated-
 cat delegated-all-latest | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' >chnroute.txt
 ```
 
-2¡¢ºÏ²¢chnroute.txt(338188032 IPs)£¬Éú³Échnroute_merged.txt(338188032 IPs)
+2ã€åˆå¹¶chnroute.txt(338188032 IPs)ï¼Œç”Ÿæˆchnroute_merged.txt(338188032 IPs)
 
-3¡¢½«ËùÓĞ/12¼°ÒÔÉÏ¸Ä³É/11£¬²¢ºÏ²¢£¬Éú³É11_143.txt(713031680 IPs)
+3ã€å°†æ‰€æœ‰/12åŠä»¥ä¸Šæ”¹æˆ/11ï¼Œå¹¶åˆå¹¶ï¼Œç”Ÿæˆ11_143.txt(713031680 IPs)
 
-4¡¢Éú³É²»º¬±£ÁôIPµÄcn-no-route1.txt(712965888 IPs)
+4ã€ç”Ÿæˆä¸å«ä¿ç•™IPçš„cn-no-route1.txt(712965888 IPs)
 
-5¡¢Éú³Éº¬±£ÁôIPµÄcn-no-route2.txt(1305674752 IPs)£¬192.168.0.0/24Ğèµ¥ÁĞ£¬·ñÔòWindows¿Í»§¶Ë192.168.x.xÕû¶ÎÎŞ·¨½ÓÊÕ¡£
+5ã€ç”Ÿæˆå«ä¿ç•™IPçš„cn-no-route2.txt(1305674752 IPs)ï¼Œ192.168.0.0/24éœ€å•åˆ—ï¼Œå¦åˆ™Windowså®¢æˆ·ç«¯192.168.x.xæ•´æ®µæ— æ³•æ¥æ”¶ã€‚
 
-## ×¢ÒâÊÂí—
+## æ³¨æ„äº‹é …
 
-1¡¢0.10.5 ¼°Ö®Ç°°æ±¾ocservĞèÒªĞŞ¸Äsrc/vpn.hÀ´Ö§³Ö³¬¹ı96ĞĞ(ocservÄ¬ÈÏÖµ)µ«²»³¬¹ı200ĞĞ(Cisco AnyConnect×î´óÖµ)µÄÂ·ÓÉ±í:
+1ã€0.10.5 åŠä¹‹å‰ç‰ˆæœ¬ocservéœ€è¦ä¿®æ”¹src/vpn.hæ¥æ”¯æŒè¶…è¿‡96è¡Œ(ocservé»˜è®¤å€¼)ä½†ä¸è¶…è¿‡200è¡Œ(Cisco AnyConnectæœ€å¤§å€¼)çš„è·¯ç”±è¡¨:
 
 ```
 #define MAX_CONFIG_ENTRIES 96
 ```
 
-96¸ÄÎª200ÒÔÉÏ
+96æ”¹ä¸º200ä»¥ä¸Š
 
-0.10.6 ¼°Ö®ºó°æ±¾ocserv²»ĞèÒªĞŞ¸Ä£¬²Î¿¼[https://gitlab.com/ocserv/ocserv/issues/17](https://gitlab.com/ocserv/ocserv/issues/17)
+0.10.6 åŠä¹‹åç‰ˆæœ¬ocservä¸éœ€è¦ä¿®æ”¹ï¼Œå‚è€ƒ[https://gitlab.com/ocserv/ocserv/issues/17](https://gitlab.com/ocserv/ocserv/issues/17)
 
-2¡¢¸ù¾İ[Cisco¹Ù·½ÎÄµµ](http://www.cisco.com/c/en/us/products/collateral/security/ios-sslvpn/prod_white_paper0900aecd80512071.html)£¬no-routeºÍroute²»ÄÜÍ¬Ê±Ê¹ÓÃ¡£
+2ã€æ ¹æ®[Ciscoå®˜æ–¹æ–‡æ¡£](http://www.cisco.com/c/en/us/products/collateral/security/ios-sslvpn/prod_white_paper0900aecd80512071.html)ï¼Œno-routeå’Œrouteä¸èƒ½åŒæ—¶ä½¿ç”¨ã€‚
 
 ```
 You can specify either split-include or split-exclude, but you cannot specify both options.
@@ -42,13 +42,13 @@ You can specify either split-include or split-exclude, but you cannot specify bo
 
 ## Q&A
 
-ÎªÊ²Ã´Ñ¡Ôñ½«ËùÓĞ/12¼°ÒÔÉÏ¸Ä³É/11£¬¶ø²»ÊÇ½«ËùÓĞ/13¼°ÒÔÉÏ¸Ä³É/12»ò½«ËùÓĞ/11¼°ÒÔÉÏ¸Ä³É/10£¿
+ä¸ºä»€ä¹ˆé€‰æ‹©å°†æ‰€æœ‰/12åŠä»¥ä¸Šæ”¹æˆ/11ï¼Œè€Œä¸æ˜¯å°†æ‰€æœ‰/13åŠä»¥ä¸Šæ”¹æˆ/12æˆ–å°†æ‰€æœ‰/11åŠä»¥ä¸Šæ”¹æˆ/10ï¼Ÿ
 
-* ÈôŒ¢ËùÓĞ/13¼°ÒÔÉÏ¸Ä³É/12£¬„t²»º¬±£ÁôIPµÄÂ·ÓÉ±íÊÇ261—l(580911104 IPs)£¬³¬ß^ÁË¿Í‘ô¶ËÏŞÖÆµÄ×î¸ß200—l¡£
-* ÈôŒ¢ËùÓĞ/12¼°ÒÔÉÏ¸Ä³É/11£¬„t²»º¬±£ÁôIPµÄÂ·ÓÉ±íÊÇ143—l(713031680 IPs)¡£
-* ÈôŒ¢ËùÓĞ/11¼°ÒÔÉÏ¸Ä³É/10£¬„t²»º¬±£ÁôIPµÄÂ·ÓÉ±íÊÇ69—l(847249408 IPs)£¬IP¹ ‡úßMÒ»²½”U´ó£¬Õ`²îßMÒ»²½”U´ó¡£
+* è‹¥å°‡æ‰€æœ‰/13åŠä»¥ä¸Šæ”¹æˆ/12ï¼Œå‰‡ä¸å«ä¿ç•™IPçš„è·¯ç”±è¡¨æ˜¯261æ¢(580911104 IPs)ï¼Œè¶…éäº†å®¢æˆ¶ç«¯é™åˆ¶çš„æœ€é«˜200æ¢ã€‚
+* è‹¥å°‡æ‰€æœ‰/12åŠä»¥ä¸Šæ”¹æˆ/11ï¼Œå‰‡ä¸å«ä¿ç•™IPçš„è·¯ç”±è¡¨æ˜¯143æ¢(713031680 IPs)ã€‚
+* è‹¥å°‡æ‰€æœ‰/11åŠä»¥ä¸Šæ”¹æˆ/10ï¼Œå‰‡ä¸å«ä¿ç•™IPçš„è·¯ç”±è¡¨æ˜¯69æ¢(847249408 IPs)ï¼ŒIPç¯„åœé€²ä¸€æ­¥æ“´å¤§ï¼Œèª¤å·®é€²ä¸€æ­¥æ“´å¤§ã€‚
 
-## [±£ÁôIP](http://en.wikipedia.org/wiki/Reserved_IP_addresses) (592708864 IPs)
+## [ä¿ç•™IP](http://en.wikipedia.org/wiki/Reserved_IP_addresses) (592708864 IPs)
 ```
 0.0.0.0/8
 10.0.0.0/8
